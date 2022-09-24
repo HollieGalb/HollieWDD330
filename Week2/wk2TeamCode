@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/small.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="rickRoll">Week2</h1>
+        <a href="../index.html"> 🡠 Back</a>
+    </header>
+    <main>
+        <input type="number" name="" id="number" required>
+        <input type="button" value="Calculate total" id="button_here">
+        <br>
+        <input type="number" name="" id="number2" required>
+        <input type="button" value="+" id="plus">
+        <div id="numbers"></div>
+        <!-- <input type="checkbox" name="" id=""> -->
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        document.getElementById("button_here").addEventListener('click', () => {
+            let number = document.getElementById("number").value;
+            if (number) {
+                let numbers = number.split('');
+                let total = 0;
+                numbers.forEach(e => {
+                    total += parseInt(e); // convert string to integer
+                });
+                document.getElementById('numbers').innerHTML = total;
+            }
+        });
+        document.getElementById("plus").addEventListener('click', () => {
+            let number = document.getElementById("number").value + document.getElementById("number2").value;
+            if (number) {
+                let numbers = number.split('');
+                let total = 0;
+                numbers.forEach(e => {
+                    total += parseInt(e); // convert string to integer
+                });
+                document.getElementById('numbers').innerHTML = total;
+            }
+        }); 
+        // input type = "text"
+        // id = "add1"
+        // placeholder = "First number" >
+        //     <
+        //     button id = "add"
+        // onclick =
+        //     "add(parseFloat(document.getElementById('add1').value), parseFloat(document.getElementById('add2').value))" >
+        //     + < /button>             <
+        //     button id = "subtraction"
+        // onclick =
+        //     "add(parseFloat(document.getElementById('add1').value), parseFloat(document.getElementById('add2').value))" >
+        //     - < /button>  <
+        //     input type = "text"
+        // id = "add2"
+        // placeholder = "Second number" >
+        //     <
+        //     div id = "result2" > < /div>
+    </script>
+    <script src="../js/week2.js"></script>
+</body>
+
+</html>
